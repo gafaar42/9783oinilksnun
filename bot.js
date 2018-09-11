@@ -8,6 +8,13 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const client = new Discord.Client();
 
+client.on('ready', () => {
+  client.user.setActivity("Type 2help", {type: 'LISTENING'});
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
+});
+
 client.on('ready', () => {	
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
