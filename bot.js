@@ -9,7 +9,7 @@ const queue = new Map();
 const client = new Discord.Client();
 
 client.on('ready', () => {
-  client.user.setActivity("Type 2help", {type: 'LISTENING'});
+  client.user.setActivity("Type 2play", {type: 'LISTENING'});
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
