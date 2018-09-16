@@ -222,4 +222,13 @@ client.on("message", message => {
 		message.member.voiceChannel.join().then(message.react('✅'));
 	}
 });
+client.on('message', async msg =>{
+    if(message.content.startsWith(prefix + '2replay')) {
+        if (!serverQueue) return msg.channel.send('لايوجد اغنيه لي اعادتها | ❌');
+    const alpha = new Discord.RichEmbed()
+    .setDescription(`سيتم اعاده تشغيل الفديو :**${serverQueue.songs[0].title}**`)
+    msg.channel.send({embed: alpha})
+    return handleVideo(video, msg, msg.member.voiceChannel);
+    }
+});
 client.login(process.env.BOT_TOKEN);
